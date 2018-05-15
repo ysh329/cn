@@ -306,6 +306,7 @@ img{
     letter-spacing: 2px;
     margin-top:-30px;
 }
+
 .data-shade{
     position: absolute;
     top:0;
@@ -364,15 +365,11 @@ img{
     line-height: 35px;
     background: #414142;
     color:#fff;
-    text-align: center;
     font-size: 16px;
-    text-align: right;
+    text-align: center;
 }
 .pd-tit strong{
-    position: relative;
-    text-transform: uppercase; 
     letter-spacing: 2px;
-    margin-right: 40px;
 }
 .pdNum{
     font-size: 50px;
@@ -382,13 +379,16 @@ img{
 }
 .pd-h1{
     font-size: 20px;
+    line-height: 36px;
+    font-weight: bold;
+    padding-bottom:20px;
 }
 .pd-num{
-    position: absolute;
-    top:-25px;
-    left:-65px;
+    display:inline-block;
+    margin-top:-25px;
     font-size: 50px;
     font-style: italic;
+    margin-right:8px;
 }
 .pd-list li:hover .shade{
     background: #0070bb;
@@ -414,11 +414,11 @@ img{
     display: none;
     padding:5%;
     line-height: 2;
-    text-align: center;
+    text-align: left;
 }
 .pd-min img{
     display: block;
-    margin:0 auto;
+    margin:0 auto 20px;
 }
 .pd-min .pd-h1{
     text-align: center;

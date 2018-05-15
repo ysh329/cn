@@ -41,7 +41,7 @@
                 <li><a href="#about">关于我们</a></li>
                 <li><a href="#pd">产品介绍</a></li>
                 <li><a href="#contact">联系我们</a></li>
-                <li><a href="#blog">博客</a></li>
+                <li><a href="http://perfxlab.com/blogs/" target="_blank">博客</a></li>
                 <li><a href="https://perfxlab.com" target="_blank">En</a></li>
                 
             </ul>
@@ -52,7 +52,7 @@
             <li><a href="#about">关于我们</a></li>
             <li><a href="#pd2">产品介绍</a></li>
             <li><a href="#contact">联系我们</a></li>
-            <li><a href="#blog">博客</a></li>
+            <li><a href="http://perfxlab.com/blogs/" target="_blank">博客</a></li>
             <li><a href="https://perfxlab.com">En</a></li>
         </ul>            
     </div>
@@ -136,93 +136,127 @@
                 <div class="clearfix">
                     <div class="fl pd-txt">
                         <div class="pd-txt-detail blk">
-                            <div class="pd-h1"><span class="pdNum">01</span><strong>产品解析说明</strong></div>
-                            传统深度学习框架的优点在于功能完备，但是可执行文件＞2MB，且代码的耦合度较高，不利于二次开发，开发语言层次较高，不利于硬件平台的扩展，且框架设计和性能优化紧耦合，并不利于单独做优化，依赖库太多，用于开发测试有很大的不便。 <br>
-                            而InferXLite虽然支持模型预测但是代码量小，组织比较松散，且只组装有用的代码模块，功能较为完备，接口简单，支持所有的网络模型。完全用C语言开发，可以无缝对接移植，几乎没有任何依赖库，性能卓越，使用最好的加速库，框架层面对于算法加速也极尽考虑。                            
+                            <div class="pd-h1"><span class="pdNum">01</span>嵌入式深度学习开发平台PerfBox</div>
+                            PerfBOX是PerfXLab开发的一款顶级嵌入式深度学习开发平台，采用六核64位ARM处理器，并集成ARM Mali-T860四核GPU，并拥有2GB/4GB DDR3和16G/32GB的eMMC，性能强大，是一款学习、开发、部署深度学习应用的完美平台。<br />
+                            PerfBOX特点：<br />
+                            性能强大，采用六核64位ARM处理器以及ARM Mali-T860四核GPU，满足深度学习Inference阶段的需求<br />
+                            开发简单，PerfBOX预装本公司开发的嵌入式深度学习框架InferXLite，可部署深度学习应用<br />
+                            CPU+GPU处理器研发的高性能深度学习算法库PerfDNN_CL(支持fp16)，可充分发挥硬件平台的计算能力<br />
+                            支持场景多样化，支持Android和Unbuntu双系统，满足不同场景需求<br />
+                            丰富的外部接口，提供了DP1.2、PCIe M.2、USB3.0 、Type-C、千兆以太网、HDMI视频接口等丰富的外部接口，以便用户拓展。                           
                         </div>
                         <div class="pd-txt-detail">
-                            <div class="pd-h1"><span class="pdNum">02</span><strong>产品解析说明</strong></div>
-                            OpenBLAS与PerfBLAS的区别在于前者主要用于科学计算，后者则是为深度学习专项定制，<br>
-                            PerBLAS的目的在于将深度学习的Inference计算迁移到移动平台，手机，机器人等。，<br>
-                            主要针对ARM移动端的深度学习优化，<br>
-                            性能要远优于OpenBLAS。测试CPU型号为ARM Cortex A57（1.7GHz），<br>
-                            （测试网络为AlexNet和VGG16）和ARM Cortex A15（2.32GHz）（测试网络环境为10层DNN网络模型）
+                            <div class="pd-h1"><span class="pdNum">02</span><strong>轻量级深度学习推理框架InferXLite</strong></div>
+                            目前在业内，通用框架有很多诟病：可执行文件过大&gt;2MB,代码的耦合度比较高，不利于硬件平台的扩展，框架设计和性能优化组件往往会纠缠在一起，依赖库比较多，不利于开发测试。InferXLite是嵌入式AI整体解决方案中的轻量级深度学习专用框架，相较于传统框架而言有很多优势。<br />
+                            InferXLite特点：<br />
+                            ●小（&lt;100K）,组织松散，特别适用于移动嵌入式设备。<br />
+                            ●纯C开发，可移植任何硬件平台。<br />
+                            ●无依赖库<br />
+                            ●框架设计和性能加速分离<br />
+                            ●性能卓越，框架层面对与算法加速也极尽考虑。
                         </div> 
                         <div class="pd-txt-detail">
-                            <div class="pd-h1"><span class="pdNum">03</span><strong>产品解析说明</strong></div>
-                            PerfCV是基于OpenCL的OpenCV库，开始建设时间为2010年12月，由AMD赞助开发。<br>
-                            目标是建立一个OpenCL、平台自适应的高性能OpenCV库，<br>
-                            OpenCVCL的核心代码已经进入到OpenCV官方库中。(澎峰科技CTO贾海鹏贡献)
+                            <div class="pd-h1"><span class="pdNum">03</span><strong>深度学习优化矩阵计算库PerfBLAS</strong></div>
+                                PerBLAS是嵌入式AI整体解决方案的核心组件之一，专注于深度学习的计算加速，相较于OpenBLAS，PerfBLAS针对ARM等嵌入式平台进行深度学习卷积算法优化，性能远优于OpenBLAS。PerfBLAS可广泛用于移动平台，手机、机器人、无人机等领域。<br />
+                                测试平台：ARM Cortex A57（1.7GHz）、ARM Cortex A57（1.7GHz）、ARM Cortex A15(2.32GHz
+                                )。测试网络为：AlexNet、VGG16、10层DNN网络模型（图像类应用）。
                         </div>
                         <div class="pd-txt-detail">
-                            <div class="pd-h1"><span class="pdNum">04</span><strong>产品解析说明</strong></div>
-                            产品解析说明产品解析说明产品解析说明产品解析说明 <br>
-                            产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明
-                            产品解析说明产品解析说明产品解析说明产品解析。
-                        </div>
+                            <div class="pd-h1"><span class="pdNum">04</span><strong>深度神经网络计算库PerfDNN</strong></div>
+                                PerfDNN是一个跨平台、高性能的轻量级深度学习算法库，实现了深度神经网络的核心算法，并向上提供了统一的用户接口，可非常便捷的集成到Caffe、DarkNet、InferXLite等深度学习框架中。<br />
+                                测试平台：Rk3399（1.8GHz），测试网络为：VGG16、VGG19、Resnet_50、Resnet_101。
+                            </div>
                         <div class="pd-txt-detail">
-                            <div class="pd-h1"><span class="pdNum">05</span><strong>产品解析说明</strong></div>
-                            产品解析说明产品解析说明产品解析说明产品解析说明 <br>
-                            产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明
-                            产品解析说明产品解析说明产品解析说明产品解析。
+                            <div class="pd-h1"><span class="pdNum">05</span><strong>高性能计算机视觉库PerfCV</strong></div>
+                                PerfCV是一个面向深度学习的可跨平台高性能计算机视觉库，实现了深度学习中主要的图像预处理算法，包括cvtColor、resize、warm_affine、warm_perspective等，PerfCV可在GPU、x86、ARM等多个硬件平台上实现高性能。<br />
+                                PerfCV特点：
+                                跨平台：支持GPU、x86、ARM V7、ARM V8等多个平台。<br />
+                                高性能：在不同平台上，性能均优于OpenCV<br />
+                                高度定制：可根据用户需求，针对实际应用场景进行高度定制。<br />
+                                测试平台：ARM Cortex A15
                         </div> 
                         <div class="pd-txt-detail">
-                            <div class="pd-h1"><span class="pdNum">06</span><strong>产品解析说明</strong></div>
-                            产品解析说明产品解析说明产品解析说明产品解析说明 <br>
-                            产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明
-                            产品解析说明产品解析说明产品解析说明产品解析。
-                        </div>                                                                         
+                            <div class="pd-h1"><span class="pdNum">06</span><strong>Perf-V工程板</strong></div>
+                                Perf-V Model I 工程板是澎峰科技为RISC-V开源社区设计的FPGA开发板，集成了各种外设新品啊，提供多种接口，具备强大的灵活性，成功的移植了多种RISC-V处理器架构，并配备了丰富的学习资料，为RISC-V处理器设计和FPGA产品开发提供了良好的实验平台，是学习、科研、项目开发、DEMO方案的首选硬件。
+                        </div>
+                        <div class="pd-txt-detail">
+                            <div class="pd-h1"><span class="pdNum">07</span><strong>深度神经网络自动量化工具DL-Quants</strong></div>
+                                目前深度神经网络的量化是嵌入式系统移植过程中非常重要的工作，其重要性不亚于单纯的性能优化。相比于浮点运算，定点运算对于存储和计算资源的占用更小、功耗更低、执行效率更高。传统的定点化工程师，需要针对数据特点，手动的去测试得到量化方案。而当前大多数十层的神经网络已无法采用以前传统的量化方案来解决。采用传统方式往往会带来难以预料的最终识别精度损失，且量化过程与结果都难以追溯和评估，量化的开发周期长，实现复杂，时间成本、人力成本都很高。<br /><br />
+
+                                澎峰科技针对卷积神经网络，面向FPGA、嵌入式ARM等诸多嵌入式平台，推出了一套定点自动化软件DeepLearning-Quants（简称DL-Quants），已实现神经网络量化方案的自动生成。<br /><br />
+                                ◎ 深度神经网络量化最优方案的自动生成，无需人工参与。<br />
+                                ◎ 神经网络计算流可根据导入的标准文件（prototxt）自动生成，无需添加代码。<br />
+                                ◎ 量化参数全控制，量化模式自由定义，客户可根据需要自行决定量化宽度。<br />
+                                ◎ 软件量化评估结果与FPGA等硬件实现的结果bit级一致。<br />
+                                ◎ 检测结果与误差分析可视化，支持逐层结果对比评估，任意中间数据输出。<br />
+                                ◎ 人性化的UI界面，支持Windows/Linux等系统，可跨平台使用。                                
+                        </div>                                                                                                
                     </div>
                     <div class="fr pd-list clearfix">        
                         <ul class="clearfix pd-list-ul">
                             <li class="pd-blue">
-                                <a  class="group3" href="images/InferXLite.png" title="InferXLite">
+                                <a class="group3" href="images/PerfBOX.jpg" title="嵌入式深度学习开发平台PerfBox">
                                     <img src="images/p1.jpg" alt="">
                                     <span class="shade"></span>
                                     <div class="pd-tit">
-                                        <strong><span class="pd-num">01</span>inferXL性能比较</strong>
+                                        <strong><span class="pd-num">01</span>PerfBox</strong>
                                     </div>
                                 </a>
                             </li>                  
                             <li>
-                                <a  class="group3" href="images/PerfBLAS.png" title="PerfBLAS">
-                                    <img src="images/p1.jpg" alt="">
+                                <a class="group3" href="images/InferXLite.png" title="轻量级深度学习推理框架 InferXLite">
+                                    <img src="images/p2.jpg" alt="">
                                     <span class="shade"></span>
                                     <div class="pd-tit">
-                                        <strong><span class="pd-num">02</span>inferXL性能比较</strong>
+                                        <strong><span class="pd-num">02</span>InferXLite</strong>
                                     </div>
                                 </a>
                             </li> 
                             <li>
-                                <a  class="group3" href="images/PerfCV.png" title="PerfCV">
-                                    <img src="images/p1.jpg" alt="">
+                                <a class="group3" href="images/PerfBLAS.png" title="深度学习优化矩阵计算库PerfBLAS">
+                                    <img src="images/p3.jpg" alt="">
                                     <span class="shade"></span>
                                     <div class="pd-tit">
-                                        <strong><span class="pd-num">03</span>inferXL性能比较</strong>
+                                        <strong><span class="pd-num">03</span>PerfBLAS</strong>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <img src="images/p2.jpg" alt="">
-                                <span class="shade"></span>
-                                <div class="pd-tit">
-                                    <strong><span class="pd-num">04</span>inferXL性能比较</strong>
-                                </div>
-                            </li> 
-                            <li>
-                                <img src="images/p1.jpg" alt="">
-                                <span class="shade"></span>
-                                <div class="pd-tit">
-                                    <strong><span class="pd-num">05</span>inferXL性能比较</strong>
-                                </div>
+                                <a class="group3" href="images/PerfDNN.png" title="深度神经网络计算库PerfDNN">
+                                    <img src="images/p4.jpg" alt="">
+                                    <span class="shade"></span>
+                                    <div class="pd-tit">
+                                        <strong><span class="pd-num">04</span>PerfDNN</strong>
+                                    </div>
+                                </a>                                
                             </li>
                             <li>
-                                <img src="images/p3.jpg" alt="">
-                                <span class="shade"></span>
-                                <div class="pd-tit">
-                                    <strong><span class="pd-num">06</span>inferXL性能比较</strong>
-                                </div>
-                            </li>                                                                       
+                                <a class="group3" href="images/PerfCV.png" title="高性能计算机视觉库PerfCV">
+                                    <img src="images/p5.jpg" alt="">
+                                    <span class="shade"></span>
+                                    <div class="pd-tit">
+                                        <strong><span class="pd-num">05</span>PerfCV</strong>
+                                    </div>
+                                </a>                                
+                            </li>
+                            <li>
+                                <a class="group3" href="images/Perf-V.png" title="Perf-V工程板">
+                                    <img src="images/p6.jpg" alt="">
+                                    <span class="shade"></span>
+                                    <div class="pd-tit">
+                                        <strong><span class="pd-num">06</span>Perf-V工程板</strong>
+                                    </div>
+                                </a>                                
+                            </li>
+                            <li>
+                                <a class="group3" href="images/DL-Quants.png" title="深度神经网络自动量化工具DL-Quants">
+                                    <img src="images/p1.jpg" alt="">
+                                    <span class="shade"></span>
+                                    <div class="pd-tit">
+                                        <strong><span class="pd-num">07</span>DL-Quants</strong>
+                                    </div>
+                                </a>                                
+                            </li>                   
                         </ul>
                     </div>
                 </div>
@@ -238,39 +272,97 @@
                 <div class="swiper-container">            
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a  class="" href="images/InferXLite.png" title="InferXLite">
-                                <img src="images/InferXLite.png" alt="">   
+                            <a href="images/PerfBOX.jpg" title="PerfBox">
+                                <img src="images/PerfBOX.jpg" alt="">   
                             </a>  
                             <div>
-                                <div class="pd-h1"><span class="pdNum">01</span><strong>产品解析说明</strong></div>
-                                产品解析说明产品解析说明产品解析说明产品解析说明 <br>
-                                产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明
-                                产品解析说明产品解析说明产品解析说明产品解析。
+                                <div class="pd-h1"><span class="pdNum">01</span>嵌入式深度学习开发平台PerfBox</div>
+                                PerfBOX是PerfXLab开发的一款顶级嵌入式深度学习开发平台，采用六核64位ARM处理器，并集成ARM Mali-T860四核GPU，并拥有2GB/4GB DDR3和16G/32GB的eMMC，性能强大，是一款学习、开发、部署深度学习应用的完美平台。<br />
+                                PerfBOX特点：<br />
+                                性能强大，采用六核64位ARM处理器以及ARM Mali-T860四核GPU，满足深度学习Inference阶段的需求<br />
+                                开发简单，PerfBOX预装本公司开发的嵌入式深度学习框架InferXLite，可部署深度学习应用<br />
+                                CPU+GPU处理器研发的高性能深度学习算法库PerfDNN_CL(支持fp16)，可充分发挥硬件平台的计算能力<br />
+                                支持场景多样化，支持Android和Unbuntu双系统，满足不同场景需求<br />
+                                丰富的外部接口，提供了DP1.2、PCIe M.2、USB3.0 、Type-C、千兆以太网、HDMI视频接口等丰富的外部接口，以便用户拓展。  
                             </div>           
                         </div>
                         <div class="swiper-slide">
-                            <a  class="" href="images/PerfBLAS.png" title="PerfBLAS">
-                                <img src="images/PerfBLAS.png" alt="">   
+                            <a href="images/InferXLite.png" title="InferXLite">
+                                <img src="images/InferXLite.png" alt="">   
                             </a>      
                             <div>
-                                <div class="pd-h1"><span class="pdNum">02</span><strong>产品解析说明</strong></div>
-                                产品解析说明产品解析说明产品解析说明产品解析说明 <br>
-                                产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明
-                                产品解析说明产品解析说明产品解析说明产品解析。
+                            <div class="pd-h1"><span class="pdNum">02</span><strong>轻量级深度学习推理框架InferXLite</strong></div>
+                            目前在业内，通用框架有很多诟病：可执行文件过大&gt;2MB,代码的耦合度比较高，不利于硬件平台的扩展，框架设计和性能优化组件往往会纠缠在一起，依赖库比较多，不利于开发测试。InferXLite是嵌入式AI整体解决方案中的轻量级深度学习专用框架，相较于传统框架而言有很多优势。<br />
+                            InferXLite特点：<br />
+                            ●小（&lt;100K）,组织松散，特别适用于移动嵌入式设备。<br />
+                            ●纯C开发，可移植任何硬件平台。<br />
+                            ●无依赖库<br />
+                            ●框架设计和性能加速分离<br />
+                            ●性能卓越，框架层面对与算法加速也极尽考虑。
                             </div>           
                         </div>
                         <div class="swiper-slide">
-                            <a  class="" href="images/PerfCV.png" title="PerfCV">
+                            <a href="images/PerfBLAS.png" title="PerfBLAS">
+                                <img src="images/PerfBLAS.png" alt="">   
+                            </a>    
+                            <div>
+                            <div class="pd-h1"><span class="pdNum">03</span><strong>深度学习优化矩阵计算库PerfBLAS</strong></div>
+                                PerBLAS是嵌入式AI整体解决方案的核心组件之一，专注于深度学习的计算加速，相较于OpenBLAS，PerfBLAS针对ARM等嵌入式平台进行深度学习卷积算法优化，性能远优于OpenBLAS。PerfBLAS可广泛用于移动平台，手机、机器人、无人机等领域。<br />
+                                测试平台：ARM Cortex A57（1.7GHz）、ARM Cortex A57（1.7GHz）、ARM Cortex A15(2.32GHz
+                                )。测试网络为：AlexNet、VGG16、10层DNN网络模型（图像类应用）。
+                            </div>           
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="images/PerfDNN.png" title="PerfDNN">
+                                <img src="images/PerfDNN.png" alt="">   
+                            </a>    
+                            <div>
+                                <div class="pd-h1"><span class="pdNum">04</span><strong>深度神经网络计算库PerfDNN</strong></div>
+                                PerfDNN是一个跨平台、高性能的轻量级深度学习算法库，实现了深度神经网络的核心算法，并向上提供了统一的用户接口，可非常便捷的集成到Caffe、DarkNet、InferXLite等深度学习框架中。<br />
+                                测试平台：Rk3399（1.8GHz），测试网络为：VGG16、VGG19、Resnet_50、Resnet_101。
+                            </div>
+                        </div>           
+                        <div class="swiper-slide">
+                            <a href="images/PerfCV.png" title="PerfCV">
                                 <img src="images/PerfCV.png" alt="">   
                             </a>    
                             <div>
-                                <div class="pd-h1"><span class="pdNum">03</span><strong>产品解析说明</strong></div>
-                                产品解析说明产品解析说明产品解析说明产品解析说明 <br>
-                                产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明产品解析说明
-                                产品解析说明产品解析说明产品解析说明产品解析。
+                                <div class="pd-h1"><span class="pdNum">05</span><strong>高性能计算机视觉库PerfCV</strong></div>
+                                PerfCV是一个面向深度学习的可跨平台高性能计算机视觉库，实现了深度学习中主要的图像预处理算法，包括cvtColor、resize、warm_affine、warm_perspective等，PerfCV可在GPU、x86、ARM等多个硬件平台上实现高性能。<br />
+                                PerfCV特点：
+                                跨平台：支持GPU、x86、ARM V7、ARM V8等多个平台。<br />
+                                高性能：在不同平台上，性能均优于OpenCV<br />
+                                高度定制：可根据用户需求，针对实际应用场景进行高度定制。<br />
+                                测试平台：ARM Cortex A15         
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="images/Perf-V.png" title="Perf-V">
+                                <img src="images/Perf-V.png" alt="">   
+                            </a>    
+                            <div>
+                                <div class="pd-h1"><span class="pdNum">06</span><strong>Perf-V工程板</strong></div>
+                                Perf-V Model I 工程板是澎峰科技为RISC-V开源社区设计的FPGA开发板，集成了各种外设新品啊，提供多种接口，具备强大的灵活性，成功的移植了多种RISC-V处理器架构，并配备了丰富的学习资料，为RISC-V处理器设计和FPGA产品开发提供了良好的实验平台，是学习、科研、项目开发、DEMO方案的首选硬件。
                             </div>           
-                        </div>                                                      
-                    </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="images/DL-Quants.png" title="DL-Quants">
+                                <img src="images/DL-Quants.png" alt="">   
+                            </a>    
+                            <div>
+                                <div class="pd-h1"><span class="pdNum">07</span><strong>深度神经网络自动量化工具DL-Quants</strong></div>
+                                    目前深度神经网络的量化是嵌入式系统移植过程中非常重要的工作，其重要性不亚于单纯的性能优化。相比于浮点运算，定点运算对于存储和计算资源的占用更小、功耗更低、执行效率更高。传统的定点化工程师，需要针对数据特点，手动的去测试得到量化方案。而当前大多数十层的神经网络已无法采用以前传统的量化方案来解决。采用传统方式往往会带来难以预料的最终识别精度损失，且量化过程与结果都难以追溯和评估，量化的开发周期长，实现复杂，时间成本、人力成本都很高。<br /><br />
+
+                                    澎峰科技针对卷积神经网络，面向FPGA、嵌入式ARM等诸多嵌入式平台，推出了一套定点自动化软件DeepLearning-Quants（简称DL-Quants），已实现神经网络量化方案的自动生成。<br /><br />
+                                    ◎ 深度神经网络量化最优方案的自动生成，无需人工参与。<br />
+                                    ◎ 神经网络计算流可根据导入的标准文件（prototxt）自动生成，无需添加代码。<br />
+                                    ◎ 量化参数全控制，量化模式自由定义，客户可根据需要自行决定量化宽度。<br />
+                                    ◎ 软件量化评估结果与FPGA等硬件实现的结果bit级一致。<br />
+                                    ◎ 检测结果与误差分析可视化，支持逐层结果对比评估，任意中间数据输出。<br />
+                                    ◎ 人性化的UI界面，支持Windows/Linux等系统，可跨平台使用。           
+                            </div>
+                        </div>
+                     </div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -358,7 +450,7 @@
                 </div>
             </div>
         </div>
-        <div class="blog" id="blog">
+<!--         <div class="blog" id="blog">
             <div class="ma">
                 <h2>
                     <span class="tit-icon"></span>
@@ -400,7 +492,7 @@
                     </div>
                 </div>          
             </div>
-        </div>
+        </div> -->
         <div class="copy">CopyRight&copy; 2018 PerfXLab. All rights reserved.</div>
     </div> 
     
